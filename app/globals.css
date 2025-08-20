@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { height: 100%; }
+.scanlines::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		to bottom,
+		rgba(0, 255, 136, 0.03) 0px,
+		rgba(0, 255, 136, 0.03) 2px,
+		transparent 3px,
+		transparent 4px
+	);
+	pointer-events: none;
+}
